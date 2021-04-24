@@ -17,6 +17,8 @@ using System.Threading.Tasks;
 using RestWithASPNETUdemy.Repository;
 using RestWithASPNETUdemy.Repository.Generic;
 using Microsoft.Net.Http.Headers;
+using RestWithASPNETUdemy.HyperMedia.Filters;
+using RestWithASPNETUdemy.HyperMedia.Enricher;
 
 namespace RestWithASPNETUdemy
 {
@@ -45,7 +47,11 @@ namespace RestWithASPNETUdemy
                 options.FormatterMappings.SetMediaTypeMappingForFormat("json", MediaTypeHeaderValue.Parse("application/json"));
             })
             .AddXmlSerializerFormatters();
-            
+
+            var filterOptions = new HyperMediaFilterOptions();
+            filterOptions.ContentResponseEnricherList.Add(new PersonEnricher());
+            services.AddSingleton(filterOptions);
+
             //Versionning API
             services.AddApiVersioning();
             //Dependency Injection
@@ -72,6 +78,7 @@ namespace RestWithASPNETUdemy
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapControllerRoute("DefaultApi", "{controller=value}/{id?}");
             });
         }
     }
