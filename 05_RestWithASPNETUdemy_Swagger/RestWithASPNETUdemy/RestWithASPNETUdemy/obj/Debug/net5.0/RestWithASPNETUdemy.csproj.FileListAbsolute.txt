@@ -226,3 +226,4 @@ C:\src\WS- Web\RestWithASPNETUdemy\05_RestWithASPNETUdemy_Swagger\RestWithASPNET
 C:\src\WS- Web\RestWithASPNETUdemy\05_RestWithASPNETUdemy_Swagger\RestWithASPNETUdemy\RestWithASPNETUdemy\obj\Debug\net5.0\ref\RestWithASPNETUdemy.dll
 C:\src\WS- Web\RestWithASPNETUdemy\05_RestWithASPNETUdemy_Swagger\RestWithASPNETUdemy\RestWithASPNETUdemy\obj\Debug\net5.0\RestWithASPNETUdemy.pdb
 C:\src\WS- Web\RestWithASPNETUdemy\05_RestWithASPNETUdemy_Swagger\RestWithASPNETUdemy\RestWithASPNETUdemy\obj\Debug\net5.0\RestWithASPNETUdemy.genruntimeconfig.cache
+C:\src\WS- Web\RestWithASPNETUdemy\05_RestWithASPNETUdemy_Swagger\RestWithASPNETUdemy\RestWithASPNETUdemy\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

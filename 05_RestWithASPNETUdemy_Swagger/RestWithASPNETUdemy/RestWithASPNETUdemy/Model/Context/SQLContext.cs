@@ -17,5 +17,6 @@ namespace RestWithASPNETUdemy.Model.Context
 
         public DbSet<Person> Persons { get; set; }
         public DbSet<Book> Books { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }
