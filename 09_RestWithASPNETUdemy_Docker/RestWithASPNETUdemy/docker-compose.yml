@@ -1,7 +1,7 @@
 version: "3.4"
 
 services:
-    restwithaspnetudemy: 
+    web: 
         container_name: restwithaspnetudemy
         image: restwithaspnetudemy
         environment:
@@ -11,3 +11,18 @@ services:
         build: 
             context: .
             dockerfile: Dockerfile
+        depends_on:
+          - db
+        networks: 
+          - udemy-network
+    db:
+        image: mcr.microsoft.com/mssql/server
+        environment:
+          SA_PASSWORD: "d32vc51ps6"
+          ACCEPT_EULA: "Y"
+        networks: 
+          - udemy-network
+networks:
+  udemy-network:
+    driver: bridge
+
