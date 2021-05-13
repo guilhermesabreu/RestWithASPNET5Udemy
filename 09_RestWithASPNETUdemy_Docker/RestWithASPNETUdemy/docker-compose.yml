@@ -18,7 +18,7 @@ services:
     db:
         image: mcr.microsoft.com/mssql/server
         environment:
-          SA_PASSWORD: "d32vc51ps6"
+          SA_PASSWORD: ""
           ACCEPT_EULA: "Y"
         networks: 
           - udemy-network
